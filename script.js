@@ -20,6 +20,8 @@ let resultNumbersField = document.getElementsByClassName("resultado");
 
 const resultNumbersFieldArray = Array.from(resultNumbersField);
 
+let table = document.getElementById("table");
+
 numbersBtnArray.forEach((numberBtn) => {
     numberBtn.addEventListener("click", () => {
         inputField.value += numberBtn.innerText;
@@ -46,8 +48,11 @@ calcBtn.addEventListener("click", () => {
         let result = eval(`${number}*${inputFieldValue}`);
         resultNumberField.innerText = result;
     });
+
+    table.style.display = 'inline';
 });
 
 resetBtn.addEventListener("click", () =>{
     inputField.value = "";
+    table.style.display = 'none';
 });

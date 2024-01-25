@@ -61,6 +61,7 @@ td {
 
 .table{
     width: 100%;
+    display: none;
 }
 
 table {
